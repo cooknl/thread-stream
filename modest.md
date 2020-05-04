@@ -2,7 +2,7 @@
 
 ## Content
 
-http://www.gutenberg.org/files/1080/1080-0.txt
+[A Modest Proposal is available from the Gutenberg project](http://www.gutenberg.org/files/1080/1080-0.txt)
 
 Downloaded using `curl`, but didn't have `curl`, so
 
@@ -11,6 +11,7 @@ sudo apt get install curl
 ```
 
 Then
+
 ```bash
 curl http://www.gutenberg.org/files/1080/1080-0.txt > mod_prop.txt
 ```
@@ -73,25 +74,25 @@ with open('mod_prop_tweetable.txt') as f:
 
 Small diversion to modify `excode` package to make test bundling optional.
 
-https://github.com/cooknl/excode
+[My fork of `excode`](https://github.com/cooknl/excode)
 
 ## The Twitter API
 
-https://developer.twitter.com/en/apps
+<https://developer.twitter.com/en/apps>
 
-https://www.geeksforgeeks.org/tweet-using-python/
+<https://www.geeksforgeeks.org/tweet-using-python/>
 
 When setting up the app, don't Enable Log in
 
-https://stackoverflow.com/questions/50601607/twitter-call-back-url
+<https://stackoverflow.com/questions/50601607/twitter-call-back-url>
 
 This is not straightforward
 
-https://towardsdatascience.com/how-to-hide-your-api-keys-in-python-fb2e1a61b0a0
+<https://towardsdatascience.com/how-to-hide-your-api-keys-in-python-fb2e1a61b0a0>
 
 But don't put spaces around your equal signs! Or hyphens in your identifiers!
 
-https://stackoverflow.com/questions/18042369/bash-export-not-a-valid-identifier
+<https://stackoverflow.com/questions/18042369/bash-export-not-a-valid-identifier>
 
 ```python
 # importing the module
@@ -107,7 +108,7 @@ access_token_secret = os.environ.get("TWITTER_ACCESS_TOKEN_SECRET")
 # authentication of consumer key and secret
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 
-# authentication of access token and secret 
+# authentication of access token and secret
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
@@ -120,7 +121,7 @@ Success!
 
 ## Thread Building
 
-https://github.com/choldgraf/threader
+<https://github.com/choldgraf/threader>
 
 Unfortunately threader requires `TwitterAPI`
 
@@ -130,19 +131,18 @@ Time to fork...
 
 Everything's fine until this point
 
-```
+```text
             # Send POST and get response
             resp = self.api.request('statuses/update', params=params)
 ```
 
 Turns out `tweepy` has a different way to update status and package responses than TwitterAPI
 
-https://github.com/geduldig/TwitterAPI
+<https://github.com/geduldig/TwitterAPI>
 
 I flirted with the idea of changing to a different library than tweepy, including embracing TwitterAPI, but the docs are better (though still incomplete) and tweepy is a more maintained library, so I stuck with tweepy.
 
-https://developer.twitter.com/en/docs/developer-utilities/twitter-libraries
-
+<https://developer.twitter.com/en/docs/developer-utilities/twitter-libraries>
 
 ## Bringing it together
 
@@ -160,7 +160,7 @@ access_token_secret = os.environ.get("TWITTER_ACCESS_TOKEN_SECRET")
 # authentication of consumer key and secret
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 
-# authentication of access token and secret 
+# authentication of access token and secret
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
